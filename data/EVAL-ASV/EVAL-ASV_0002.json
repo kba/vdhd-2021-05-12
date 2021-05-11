@@ -1,0 +1,455 @@
+{
+  "OCR-D-GT-SEG-LINE,TESS-GT4HIST": {
+    "lines": [
+      {
+        "tl_2": {
+          "length": 3,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_3": {
+          "length": 26,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_4": {
+          "length": 3,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_5": {
+          "length": 12,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_6": {
+          "length": 20,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_7": {
+          "length": 15,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_8": {
+          "length": 37,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_9": {
+          "length": 46,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_10": {
+          "length": 42,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_11": {
+          "length": 46,
+          "distance": 0.021739130434782608
+        }
+      },
+      {
+        "tl_12": {
+          "length": 48,
+          "distance": 0.041666666666666664
+        }
+      },
+      {
+        "tl_13": {
+          "length": 47,
+          "distance": 0.02127659574468085
+        }
+      },
+      {
+        "tl_14": {
+          "length": 47,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_15": {
+          "length": 45,
+          "distance": 0.022222222222222223
+        }
+      },
+      {
+        "tl_16": {
+          "length": 47,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_17": {
+          "length": 42,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_18": {
+          "length": 48,
+          "distance": 0.020833333333333332
+        }
+      },
+      {
+        "tl_19": {
+          "length": 48,
+          "distance": 0.0625
+        }
+      },
+      {
+        "tl_20": {
+          "length": 52,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_21": {
+          "length": 47,
+          "distance": 0.0425531914893617
+        }
+      },
+      {
+        "tl_22": {
+          "length": 45,
+          "distance": 0.044444444444444446
+        }
+      },
+      {
+        "tl_23": {
+          "length": 26,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_26": {
+          "length": 27,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_27": {
+          "length": 10,
+          "distance": 0.0
+        }
+      }
+    ],
+    "length": 24,
+    "distance-mean": 0.011551482680645491,
+    "distance-varia": 0.00033662916937172104
+  },
+  "OCR-D-GT-SEG-LINE,TESS-DEU": {
+    "lines": [
+      {
+        "tl_2": {
+          "length": 3,
+          "distance": 0.6666666666666666
+        }
+      },
+      {
+        "tl_3": {
+          "length": 26,
+          "distance": 0.19230769230769232
+        }
+      },
+      {
+        "tl_4": {
+          "length": 3,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_5": {
+          "length": 12,
+          "distance": 0.08333333333333333
+        }
+      },
+      {
+        "tl_6": {
+          "length": 20,
+          "distance": 0.15
+        }
+      },
+      {
+        "tl_7": {
+          "length": 15,
+          "distance": 0.13333333333333333
+        }
+      },
+      {
+        "tl_8": {
+          "length": 37,
+          "distance": 0.10526315789473684
+        }
+      },
+      {
+        "tl_9": {
+          "length": 46,
+          "distance": 0.15217391304347827
+        }
+      },
+      {
+        "tl_10": {
+          "length": 42,
+          "distance": 0.20930232558139536
+        }
+      },
+      {
+        "tl_11": {
+          "length": 46,
+          "distance": 0.1276595744680851
+        }
+      },
+      {
+        "tl_12": {
+          "length": 48,
+          "distance": 0.14583333333333334
+        }
+      },
+      {
+        "tl_13": {
+          "length": 47,
+          "distance": 0.14893617021276595
+        }
+      },
+      {
+        "tl_14": {
+          "length": 47,
+          "distance": 0.14893617021276595
+        }
+      },
+      {
+        "tl_15": {
+          "length": 45,
+          "distance": 0.06666666666666667
+        }
+      },
+      {
+        "tl_16": {
+          "length": 47,
+          "distance": 0.1702127659574468
+        }
+      },
+      {
+        "tl_17": {
+          "length": 42,
+          "distance": 0.06976744186046512
+        }
+      },
+      {
+        "tl_18": {
+          "length": 48,
+          "distance": 0.20833333333333334
+        }
+      },
+      {
+        "tl_19": {
+          "length": 48,
+          "distance": 0.1836734693877551
+        }
+      },
+      {
+        "tl_20": {
+          "length": 52,
+          "distance": 0.25
+        }
+      },
+      {
+        "tl_21": {
+          "length": 47,
+          "distance": 0.14893617021276595
+        }
+      },
+      {
+        "tl_22": {
+          "length": 45,
+          "distance": 0.2
+        }
+      },
+      {
+        "tl_23": {
+          "length": 26,
+          "distance": 0.11538461538461539
+        }
+      },
+      {
+        "tl_26": {
+          "length": 27,
+          "distance": 0.25925925925925924
+        }
+      },
+      {
+        "tl_27": {
+          "length": 10,
+          "distance": 0.4
+        }
+      }
+    ],
+    "length": 24,
+    "distance-mean": 0.18066580801874563,
+    "distance-varia": 0.016078861961118154
+  },
+  "OCR-D-GT-SEG-LINE,CALA-GT4HIST": {
+    "lines": [
+      {
+        "tl_2": {
+          "length": 3,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_3": {
+          "length": 26,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_4": {
+          "length": 3,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_5": {
+          "length": 12,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_6": {
+          "length": 20,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_7": {
+          "length": 15,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_8": {
+          "length": 37,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_9": {
+          "length": 46,
+          "distance": 0.043478260869565216
+        }
+      },
+      {
+        "tl_10": {
+          "length": 42,
+          "distance": 0.023255813953488372
+        }
+      },
+      {
+        "tl_11": {
+          "length": 46,
+          "distance": 0.021739130434782608
+        }
+      },
+      {
+        "tl_12": {
+          "length": 48,
+          "distance": 0.041666666666666664
+        }
+      },
+      {
+        "tl_13": {
+          "length": 47,
+          "distance": 0.02127659574468085
+        }
+      },
+      {
+        "tl_14": {
+          "length": 47,
+          "distance": 0.041666666666666664
+        }
+      },
+      {
+        "tl_15": {
+          "length": 45,
+          "distance": 0.022222222222222223
+        }
+      },
+      {
+        "tl_16": {
+          "length": 47,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_17": {
+          "length": 42,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_18": {
+          "length": 48,
+          "distance": 0.0625
+        }
+      },
+      {
+        "tl_19": {
+          "length": 48,
+          "distance": 0.0625
+        }
+      },
+      {
+        "tl_20": {
+          "length": 52,
+          "distance": 0.019230769230769232
+        }
+      },
+      {
+        "tl_21": {
+          "length": 47,
+          "distance": 0.06382978723404255
+        }
+      },
+      {
+        "tl_22": {
+          "length": 45,
+          "distance": 0.044444444444444446
+        }
+      },
+      {
+        "tl_23": {
+          "length": 26,
+          "distance": 0.037037037037037035
+        }
+      },
+      {
+        "tl_26": {
+          "length": 27,
+          "distance": 0.0
+        }
+      },
+      {
+        "tl_27": {
+          "length": 10,
+          "distance": 0.0
+        }
+      }
+    ],
+    "length": 24,
+    "distance-mean": 0.021035308104348574,
+    "distance-varia": 0.000512771635044658
+  }
+}

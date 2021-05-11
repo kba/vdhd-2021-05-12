@@ -106,3 +106,14 @@ The result are HTML files (Diff View) and JSON files (with CER and WER).
 
 ![](browse-ocrd.png)
 
+## Full workflow
+
+```sh
+ocrd process -m data/mets.xml \
+  "olena-binarize -I OCR-D-GT-SEG-LINE -O BIN" \
+  "tesserocr-recognize -P segmentation_level word -P textequiv_level line -P find_tables true -P model Fraktur_GT4HistOCR -I BIN -O TESS-GT4HIST" \
+  "tesserocr-recognize -P segmentation_level word -P textequiv_level line -P find_tables true -P model deu -I BIN -O TESS-DEU" \
+  "calamari-recognize -P checkpoint_dir qurator-gt4histocr-1.0 -I BIN -O CALA-GT4HIST" \
+  "cor-asv-ann-evaluate -I OCR-D-GT-SEG-LINE,TESS-GT4HIST,TESS-DEU,CALA-GT4HIST -O EVAL-ASV" \
+  "dinglehopper -P textequiv_level line -I OCR-D-GT-SEG-LINE,CALA-GT4HIST -O EVAL-DINGLE"
+```

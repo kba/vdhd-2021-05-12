@@ -1,0 +1,17 @@
+{
+  "OCR-D-GT-SEG-LINE,TESS-GT4HIST": {
+    "length": 110,
+    "distance-mean": 0.032638315863287554,
+    "distance-varia": 0.010120613640730372
+  },
+  "OCR-D-GT-SEG-LINE,TESS-DEU": {
+    "length": 110,
+    "distance-mean": 0.17414861150552538,
+    "distance-varia": 0.030377095996637286
+  },
+  "OCR-D-GT-SEG-LINE,CALA-GT4HIST": {
+    "length": 110,
+    "distance-mean": 0.044792427193718676,
+    "distance-varia": 0.01339440642349274
+  }
+}
