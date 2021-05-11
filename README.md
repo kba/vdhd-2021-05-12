@@ -25,46 +25,58 @@ unzip luz_blitz_1784.ocrd.zip 'data/*'
 
 ## Run small workflows for OCR results with tesseract and calamari, compare output
 
-<!--This executes tesseract twice (once `Fraktur_GT4HistOCR`, once `deu`) with the-->
-<!--minimalist call on the segmentation provided by the GT.. Then it runs-->
-<!--`ocrd-tesserocr-recognize` and calamari with `qurator-gt4histocr-1.0` because-->
-<!--calamari does not like the GT segmentation (we will investigate).-->
-
-This runs tesseract's segmentation, followed by two tesseract recognition runs (once with `Fraktur_GT4HistOCR`, once with `deu`)
-and finally calamari with the `qurator-gt4histocr-1.0` model.
+This workflow uses `ocrd-olena-binarize` (with the `sauvola-ms-split`
+algorithm) to binarize the images. The images are processed by two runs with
+tesseract (once `Fraktur_GT4HistOCR`, once `deu`) and once with calamari (with
+the `qurator-gt4histocr-1.0` model).
 
 ```sh
 ocrd process -m data/mets.xml \
-  "tesserocr-segment -I OCR-D-IMG -O SEG-TESS" \
-  "tesserocr-recognize -P segmentation_level word -P textequiv_level line -P find_tables true -P model Fraktur_GT4HistOCR -I SEG-TESS -O TESS-GT4HIST" \
-  "tesserocr-recognize -P segmentation_level word -P textequiv_level line -P find_tables true -P model deu -I SEG-TESS -O TESS-DEU" \
-  "calamari-recognize -P checkpoint_dir qurator-gt4histocr-1.0 -I SEG-TESS -O CALA-GT4HIST"
+  "olena-binarize -I OCR-D-GT-SEG-LINE -O BIN" \
+  "tesserocr-recognize -P segmentation_level word -P textequiv_level line -P find_tables true -P model Fraktur_GT4HistOCR -I BIN -O TESS-GT4HIST" \
+  "tesserocr-recognize -P segmentation_level word -P textequiv_level line -P find_tables true -P model deu -I BIN -O TESS-DEU" \
+  "calamari-recognize -P checkpoint_dir qurator-gt4histocr-1.0 -I BIN -O CALA-GT4HIST"
 ```
 
 This allows us to compare the files in `TESS-GT4HIST`, `TESS-DEU` and
-`CALA-GT4HIST` with each other and with the GT in `OCR-D-GT-SEG-LINE` (which
-also contains text).
+`CALA-GT4HIST` with each other and with the GT in `OCR-D-GT-SEG-LINE`.
 
-## Compare all the OCR results with one another using ocrd-cor-asv-ann-evaluate
-
-```sh
-ocrd-cor-asv-ann-evaluate -m data/mets.xml -I TESS-GT4HIST,TESS-DEU,CALA-GT4HIST -O EVAL-ASV-OCR
-```
-
-The results are JSON files in the `EVAL-ASV-OCR` filegroup with line-by-line distance measures between all the engine.
-
-## Run tesseract on the GT segmentation
-
-Now we want to compare not the output with the ground truth. We'll reuse the segmentation of the GT for this
+## Compare all the OCR results with the GT using ocrd-cor-asv-ann-evaluate
 
 ```sh
-ocrd-tesserocr-recognize -m data/mets.xml -I OCR-D-GT-SEG-LINE -O GT-TESS -P model Fraktur_GT4HistOCR
+ocrd-cor-asv-ann-evaluate -m data/mets.xml -I OCR-D-GT-SEG-LINE,TESS-GT4HIST,TESS-DEU,CALA-GT4HIST -O EVAL-ASV
 ```
 
-And we'll compare them with dinglehopper:
+The results are JSON files in the `EVAL-ASV` filegroup with line-by-line distance measures between all the engine.
 
+`data/EVAL-ASV/EVAL-ASV.json` contains the metrics (mean CER and variance) for the full workspace:
+
+```json
+{
+  "OCR-D-GT-SEG-LINE,TESS-GT4HIST": {
+    "length": 110,
+    "distance-mean": 0.032638315863287554,
+    "distance-varia": 0.010120613640730372
+  },
+  "OCR-D-GT-SEG-LINE,TESS-DEU": {
+    "length": 110,
+    "distance-mean": 0.17414861150552538,
+    "distance-varia": 0.030377095996637286
+  },
+  "OCR-D-GT-SEG-LINE,CALA-GT4HIST": {
+    "length": 110,
+    "distance-mean": 0.044792427193718676,
+    "distance-varia": 0.01339440642349274
+  }
+}
 ```
-ocrd-dinglehopper -m data/mets.xml -P textequiv_level line -I GT-TESS,OCR-D-GT-SEG-LINE -O EVAL-DINGLE-GT-TESS
+
+`data/EVAL-ASV/EVAL-ASV_0003.json` contains the metrics for the third page
+
+## Compare Calamari output with GT using dinglehopper
+
+```sh
+ocrd-dinglehopper -m data/mets.xml -P textequiv_level line -I OCR-D-GT-SEG-LINE,CALA-GT4HIST -O EVAL-DINGLE
 ```
 
 The result are HTML files (Diff View) and JSON files (with CER and WER).
