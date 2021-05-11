@@ -49,7 +49,7 @@ ocrd-cor-asv-ann-evaluate -m data/mets.xml -I OCR-D-GT-SEG-LINE,TESS-GT4HIST,TES
 
 The results are JSON files in the `EVAL-ASV` filegroup with line-by-line distance measures between all the engine.
 
-`data/EVAL-ASV/EVAL-ASV.json` contains the metrics (mean CER and variance) for the full workspace:
+[`data/EVAL-ASV/EVAL-ASV.json`](https://github.com/kba/vdhd-2021-05-12/raw/master/data/EVAL-ASV/EVAL-ASV.json) contains the metrics (mean CER and variance) for the full workspace:
 
 ```json
 {
@@ -71,7 +71,7 @@ The results are JSON files in the `EVAL-ASV` filegroup with line-by-line distanc
 }
 ```
 
-`data/EVAL-ASV/EVAL-ASV_0003.json` contains the metrics for the third page
+[`data/EVAL-ASV/EVAL-ASV_0003.json`](https://github.com/kba/vdhd-2021-05-12/raw/master/data/EVAL-ASV/EVAL-ASV_0003.json) contains the metrics for the page 3.
 
 ## Compare Calamari output with GT using dinglehopper
 
@@ -81,6 +81,28 @@ ocrd-dinglehopper -m data/mets.xml -P textequiv_level line -I OCR-D-GT-SEG-LINE,
 
 The result are HTML files (Diff View) and JSON files (with CER and WER).
 
+[HTML](https://github.com/kba/vdhd-2021-05-12/raw/master/data/EVAL-DINGLE/EVAL-DINGLE_0003.html) for page 3:
+
+[![](https://github.com/kba/vdhd-2021-05-12/raw/master/dinglehopper-0003.png)](https://github.com/kba/vdhd-2021-05-12/raw/master/data/EVAL-DINGLE/EVAL-DINGLE_0003.json)
+
+[JSON](https://github.com/kba/vdhd-2021-05-12/raw/master/data/EVAL-DINGLE/EVAL-DINGLE_0003.json) for page 3:
+
+```json
+{
+    "gt": "OCR-D-GT-SEG-LINE/OCR-D-GT-SEG-LINE_0003.xml",
+    "ocr": "CALA-GT4HIST/CALA-GT4HIST_0003.xml",
+
+    "cer": 0.07770472205618649,
+    "wer": 0.1320754716981132,
+
+    "n_characters": 1673,
+    "n_words": 265
+}
+```
+
 ## Visualize with browse-ocrd
 
 > Show diff view in browse-ocrd (https://github.com/hnesk/browse-ocrd/tree/diff-view)
+
+![](browse-ocrd.png)
+
