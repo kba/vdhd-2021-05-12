@@ -47,7 +47,7 @@ This allows us to compare the files in `TESS-GT4HIST`, `TESS-DEU` and
 ocrd-cor-asv-ann-evaluate -m data/mets.xml -I OCR-D-GT-SEG-LINE,TESS-GT4HIST,TESS-DEU,CALA-GT4HIST -O EVAL-ASV
 ```
 
-The results are JSON files in the `EVAL-ASV` filegroup with line-by-line distance measures between all the engine.
+The results are JSON files in the `EVAL-ASV` filegroup with workspace-wise and page-wise line-by-line distance and variance between the GT and all the engine.
 
 [`data/EVAL-ASV/EVAL-ASV.json`](https://github.com/kba/vdhd-2021-05-12/tree/master/data/EVAL-ASV/EVAL-ASV.json) contains the metrics (mean CER and variance) for the full workspace:
 
